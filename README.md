@@ -6,6 +6,7 @@ To use this, perform the following:
 - Add `  - browserdiff` as the first filter to a job of your choice in you `urls.yaml`
 - Run `urlwatch` once to create a baseline
 - After capturing at least 1 change in the job relative to the baseline, an .html file with visual diffs will be save in `$XDG_CONFIG_HOME/urlwatch/BrowserDiff/JobName`
+- In urlwatch's standard output, the first line includes a clickable `open` link to open the visual diff
 
 Here's a sample `urls.yaml` job:
 ```yaml
@@ -23,8 +24,8 @@ filter:
 
 <center>
 
-![Commandline output, with a clickable link for the diff .html file.](images/OutputShell.png)
+![Commandline output, with a clickable link for the diff .html file.](images/OutputCMD.png)
 
-![A sample diff .html file.](images/OutputHtml.png)
+![A sample diff .html file.](images/OutputHTML.png)
 
 </center>
