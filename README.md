@@ -1,9 +1,9 @@
 # UrlWatchVisualDiff
-A urlwatch filter to create .html files with visual diffs.
+A urlwatch filter to create .html files with visual diffs that can be opened in a browser.
 
 To use this, perform the following:
-- Copy `hooks.py` to the directory where the `urls.yaml` file is stored (e.g., `$XDG_CONFIG_HOME/urlwatch/`)
-- Add `  - browserdiff` as the first filter to a job of your choice in you `urls.yaml`:
+- Copy `hooks.py` to the directory where the `urls.yaml` file is stored (should be `$XDG_CONFIG_HOME/urlwatch/`)
+- Add `  - browserdiff` as the first filter to a job of your choice in `urls.yaml`:
     ```yaml
     name: watchdog
     kind: url
