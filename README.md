@@ -1,2 +1,30 @@
 # UrlWatchVisualDiff
-A urlwatch filter to create .html files with visual diffs
+A urlwatch filter to create .html files with visual diffs.
+
+To use this, perform the following:
+- Copy `hooks.py` to the directory where the `urls.yaml` file is stored (e.g., `$XDG_CONFIG_HOME/urlwatch/`)
+- Add `  - browserdiff` as the first filter to a job of your choice in you `urls.yaml`
+- Run `urlwatch` once to create a baseline
+- After capturing at least 1 change in the job relative to the baseline, an .html file with visual diffs will be save in `$XDG_CONFIG_HOME/urlwatch/BrowserDiff/JobName`
+
+Here's a sample `urls.yaml` job:
+```yaml
+name: watchdog
+kind: url
+url: https://time.is/Unix_time
+filter:
+  - browserdiff
+  - element-by-id: smalltime
+  - html2text
+  - re.sub:
+        pattern: '(.*)'
+        repl: '\1\n'
+```
+
+<center>
+
+![Commandline output, with a clickable link for the diff .html file.](images/OutputShell.png)
+
+![A sample diff .html file.](images/OutputHtml.png)
+
+</center>
