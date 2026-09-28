@@ -1,4 +1,4 @@
-"""Add `- browserdiff` as the first filter to save .html page diffs"""
+"""Add `- browserdiff` as the first filter of a job JOBNAME to save .html page diffs in $XDG_CONFIG_HOME/urlwatch/BrowserDiff/JobName"""
 from datetime import datetime
 from pathlib import Path
 import re
